@@ -1,8 +1,12 @@
+#Importar Bibliotecas
 import requests
 from bs4 import BeautifulSoup
 
-url = 'https://www.binance.com/pt-BR/trade/BTC_USDT?theme=dark&type=spot'
+#Incluir o par BTC/BRL
 url_btcbrl = 'https://www.binance.com/pt-BR/trade/BTC_BRL?theme=dark&type=spot'
+
+#Continuação do Código...
+url = 'https://www.binance.com/pt-BR/trade/BTC_USDT?theme=dark&type=spot'
 
 headers = {
     'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36"}
