@@ -15,7 +15,7 @@ def precobitcoin():
 
   preco = bitcoin.find('div', attrs={'class': 'css-12ujz79'})
   preco = preco.text
-  caractere_especial = r'\$'
+  caractere_especial = r'\$'+
   mensagem = re.sup(caractere_especial, '', preco)
   print(mensagem)
 
