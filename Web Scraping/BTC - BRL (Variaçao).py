@@ -18,9 +18,15 @@ def Bitcoin(mensagem):
     preco = site.find('div', attrs={'class': 'YMlKec fxKbKc'})
     texto = f'O valor atualizado da Bitcoin é de R${preco.text}'
     bot.send_message(mensagem.chat.id, texto)
-    
 
-
+@bot.message_handler(commands=['Ethereum'])
+def Bitcoin(mensagem):
+    response = requests.get('https://www.google.com/finance/quote/ETH-BRL')
+    content = response.content
+    site = BeautifulSoup(content, 'html.parser')
+    preco = site.find('div', attrs={'class': 'YMlKec fxKbKc'})
+    texto = f'O valor atualizado da Ethereum é de R${preco.text}'
+    bot.send_message(mensagem.chat.id, texto)
 
 
 
@@ -34,7 +40,7 @@ def responder(mensagem):
   
   /Bitcoin
   
-  /Etherium """
+  /Ethereum """
   
   bot.send_message(mensagem.chat.id, texto)
 
